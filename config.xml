@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.pyletra" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>PyLetra</name>
+    <description>Aqui você encontra as letras das suas músicas favoritas</description>
+    <author email="ppdfr84@gmail.com" href="https://cordova.apache.org">
+        Technetwork
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <icon src="www/img/icon.png" />
+</widget>
