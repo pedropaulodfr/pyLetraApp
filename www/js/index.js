@@ -15,7 +15,7 @@ function getLyrics() {
         console.log('Erro: >' + error);
     }
     
-    request.onload = function() {
+    request.onload = () => {
         if(request.readyState == 4 && request.status == 200){
             try{
                 let query = JSON.parse(request.response);
@@ -38,22 +38,42 @@ function getLyrics() {
                     document.getElementById("form-lyric").appendChild(textArea);
                 }
                 
-                document.getElementById('text-area-lyric').innerHTML = text;
+                let textAreaLyric = document.getElementById('text-area-lyric');
+                textAreaLyric.innerHTML = text;
 
-                save(text, title);
+                copy(textAreaLyric);
             }catch(error){
                 let alertErro = document.getElementById("alert-erro");
-                let searchMusic = document.getElementsByClassName("search-music")[0];
-                console.log(searchMusic.offsetTop);
                 alertErro.style.opacity = 1;
 
-                setTimeout(function () {
+                setTimeout(() => {
                     alertErro.style.opacity = 0;
                 }, 3000);
 
             }
         }
     }
+}
+
+
+function keyboardEvents() {
+    let fieldArtist = document.getElementById("artist");
+    let fieldMusic = document.getElementById("music");
+    let searchBtn = document.getElementById("search-btn");
+
+
+    fieldMusic.addEventListener("keydown", (e) => {
+        if (e.key == 'Enter') {
+            fieldArtist.focus();
+            fieldArtist.click();
+        }
+    });
+
+    fieldArtist.addEventListener("keydown", (e) => {
+        if (e.key == 'Enter') {
+            searchBtn.click();
+        }
+    })
 }
 
 function initialize() {
@@ -65,22 +85,21 @@ function initialize() {
     let fieldMusic = document.getElementById("music");
     let searchBtn = document.getElementById("search-btn");
     
-    menuBtn.onclick = function () {
+    menuBtn.onclick = () => {
         sidebar.classList.toggle('active');
     };
-    aboutBtn.onclick = function () {
+    aboutBtn.onclick = () => {
         alert("PyLetra\nAqui você encontra as letras das suas músicas favoritas\n\n"
         + "Desenvolvido por Pedro Paulo | Technetwork");
     }
-    
-    // EXCLUIR 
-    //sidebar.classList.toggle('active');
+
     logo.classList.toggle('fade');
     fieldArtist.classList.toggle('zoom');
     fieldMusic.classList.toggle('zoom');
     searchBtn.classList.toggle('opacity');
+    
 
-    //getLyrics();
+    keyboardEvents();
 }
 
 window.onload = initialize;

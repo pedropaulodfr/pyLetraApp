@@ -1,12 +1,10 @@
-function save(text, music) {
-    let storage = window.localStorage;
+function copy(textAreaLyric) {
+    let copy_btn = document.getElementById("copy-btn");
 
-    let save_btn = document.getElementById("save-btn");
-
-    save_btn.onclick = function () {
-        let key = getRandomIntInclusive(0, 10000000000000);
-        //storage.setItem(key, text);
-        alert("Letra de '" + music + "' salva!")
+    copy_btn.onclick = function () {
+        let textoTeste = textAreaLyric.innerHTML
+        navigator.clipboard.writeText(textAreaLyric.innerHTML);
+        alert("Letra copiada para a área de transferência");
     }
 }
 
@@ -15,3 +13,5 @@ function getRandomIntInclusive(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+
+
