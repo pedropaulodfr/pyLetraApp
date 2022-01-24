@@ -46,6 +46,7 @@ function getLyrics() {
             }catch(error){
                 let alertErro = document.getElementById("alert-erro");
                 alertErro.style.opacity = 1;
+                navigator.vibrate(300);
 
                 setTimeout(() => {
                     alertErro.style.opacity = 0;

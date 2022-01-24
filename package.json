@@ -15,7 +15,10 @@
   "devDependencies": {
     "cordova-android": "^10.1.1",
     "cordova-browser": "^6.0.0",
-    "cordova-clipboard-api": "^1.0.1"
+    "cordova-clipboard-api": "^1.0.1",
+    "cordova-plugin-screen-orientation": "^3.0.2",
+    "cordova-plugin-vibration": "^3.1.1",
+    "es6-promise-plugin": "^4.2.2"
   },
   "cordova": {
     "platforms": [
@@ -24,7 +27,9 @@
     ],
     "plugins": {
       "cordova-clipboard": {},
-      "cordova-clipboard-api": {}
+      "cordova-clipboard-api": {},
+      "cordova-plugin-screen-orientation": {},
+      "cordova-plugin-vibration": {}
     }
   },
   "dependencies": {

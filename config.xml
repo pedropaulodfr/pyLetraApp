@@ -9,4 +9,5 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <icon src="www/img/icon.png" />
+    <preference name="orientation" value="portrait" />
 </widget>
