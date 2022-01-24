@@ -34,13 +34,14 @@ function getLyrics() {
                     textArea.className = 'form-control';
                     textArea.rows = 4;
                     textArea.disabled  = true;
-                
+                    
                     document.getElementById("form-lyric").appendChild(textArea);
                 }
                 
                 let textAreaLyric = document.getElementById('text-area-lyric');
                 textAreaLyric.innerHTML = text;
-
+                
+                translation(query, textAreaLyric);
                 copy(textAreaLyric);
             }catch(error){
                 let alertErro = document.getElementById("alert-erro");
