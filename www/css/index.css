@@ -141,12 +141,21 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     height: 490px;
+    overflow-y: auto;
+    resize: none;
 }
 #text-area-lyric:hover{
     box-shadow: 0 0 1em #007cb1;
 }
 #text-area-lyric:disabled{
     background-color: #fff;
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #007cb1;
+    border-radius: 6px;
 }
 #lyric-music{
     text-align: justify;

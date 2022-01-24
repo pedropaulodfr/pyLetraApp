@@ -98,7 +98,6 @@ function initialize() {
     fieldArtist.classList.toggle('zoom');
     fieldMusic.classList.toggle('zoom');
     searchBtn.classList.toggle('opacity');
-    
 
     keyboardEvents();
 }
