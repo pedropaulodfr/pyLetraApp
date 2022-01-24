@@ -16,6 +16,7 @@
     background-color: #007cb1;
     opacity: 0.9;
     transition: width 0.5s ease;
+    will-change: transform;
 }
 .sidebar #pyletra-white{
     opacity: 0;
