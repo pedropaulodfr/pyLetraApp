@@ -51,7 +51,6 @@ function getLyrics() {
                 setTimeout(() => {
                     alertErro.style.opacity = 0;
                 }, 3000);
-
             }
         }
     }
@@ -67,7 +66,6 @@ function keyboardEvents() {
     fieldMusic.addEventListener("keydown", (e) => {
         if (e.key == 'Enter') {
             fieldArtist.focus();
-            fieldArtist.click();
         }
     });
 
