@@ -46,6 +46,12 @@ function getLyrics() {
             }catch(error){
                 let alertErro = document.getElementById("alert-erro");
                 alertErro.style.opacity = 1;
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                })
+
                 navigator.vibrate(300);
 
                 setTimeout(() => {

@@ -115,6 +115,7 @@
     transition: all 0.5s ease;
     box-shadow: 0 0 0 0;
     box-shadow: 0 0 1em #ffe04e;
+    border-color: #cccccc;
     outline: 0;
 }
 .fields .text-area-fields.zoom{
