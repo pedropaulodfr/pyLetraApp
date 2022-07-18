@@ -33,10 +33,10 @@
 
 ### Tecnologias
 
-HTML
-JavaScript
-CSS
-Apache Cordova
+HTML,
+JavaScript,
+CSS,
+Apache Cordova,
 Vagalume API
 
 
